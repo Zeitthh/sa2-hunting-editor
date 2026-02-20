@@ -1,0 +1,1 @@
+# sa2-hunting-helper-editor
