@@ -94,7 +94,7 @@ function mergeWithEmpty(saved: Partial<EditorState>): EditorState {
     levelActive:   emptyLevelActive(),
     currentLevel:  'PumpkinHill' as LevelKey,
     isDarkMode:    false,
-    language:      'spa' as const,
+    language:      'spa' as 'spa' | 'eng',
     levelSettings: {} as LevelSettingsMap,
   };
   // Merge level sets (saved may have subset of keys if levels changed)
