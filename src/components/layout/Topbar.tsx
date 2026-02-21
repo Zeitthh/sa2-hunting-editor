@@ -146,7 +146,8 @@ export function Topbar({ viewMode, onGoHome }: TopbarProps) {
     <>
       <header className="topbar">
         <div className="topbar-brand" style={{ cursor: 'pointer' }} onClick={onGoHome} title="Ir a inicio">
-          <img src="/icons/HuntingHelperEditorLogo.svg" alt="Logo" className="topbar-logo" width={28} height={28}
+          <img src={`${import.meta.env.BASE_URL}icons/HuntingHelperEditorLogo.svg`}
+ alt="Logo" className="topbar-logo" width={28} height={28}
             onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           <h1>SA2 Hunting Editor</h1>
         </div>
@@ -190,14 +191,17 @@ export function Topbar({ viewMode, onGoHome }: TopbarProps) {
           </div>
 
           <a href="#" className="topbar-site-link" title="SA2 Hunting Helper" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/HuntingHelper.svg" alt="SA2 Hunting Helper" width={24} height={24}
+            <img src={`${import.meta.env.BASE_URL}icons/HuntingHelper.svg`}
+ alt="SA2 Hunting Helper" width={24} height={24}
               onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           </a>
 
           <button className="dark-mode-btn" onClick={() => dispatch({ type: 'TOGGLE_DARK_MODE' })} title={isDarkMode ? 'Modo claro' : 'Modo oscuro'} aria-label="Toggle dark mode">
             {isDarkMode
-              ? <img src="/icons/sun.svg"  alt="Modo claro"  width={20} height={20} />
-              : <img src="/icons/moon.svg" alt="Modo oscuro" width={20} height={20} />}
+              ? <img src={`${import.meta.env.BASE_URL}icons/sun.svg`}
+  alt="Modo claro"  width={20} height={20} />
+              : <img src={`${import.meta.env.BASE_URL}icons/moon.svg`}
+ alt="Modo oscuro" width={20} height={20} />}
           </button>
         </div>
       </header>
