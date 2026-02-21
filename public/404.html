@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>SA2 Hunting Editor</title>
+  <script>
+    // GitHub Pages 404 hack for SPA pushState routing.
+    // Encodes the requested path as a ?p= query param and redirects to index.html
+    // which decodes it and calls history.replaceState to restore the real URL.
+    (function() {
+      var base = '/sa2-hunting-editor/'; // igual que en vite.config.ts
+      var path = window.location.pathname.replace(base.replace(/\/$/, ''), '');
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var redirect = base + '?p=' + encodeURIComponent(path) + (search ? '&' + search.slice(1) : '') + hash;
+      window.location.replace(redirect);
+    })();
+  </script>
+</head>
+<body></body>
+</html>
