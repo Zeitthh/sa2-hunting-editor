@@ -75,7 +75,8 @@ export function HomeScreen({ onSelectLevel }: HomeScreenProps) {
       <div className="home-content">
         {/* Hero */}
         <div className="home-hero">
-          <img src=`${import.meta.env.BASE_URL}icons/HuntingHelperEditorLogo.svg` className="home-logo"
+          <img src={`${import.meta.env.BASE_URL}icons/HuntingHelperEditorLogo.svg`}
+ alt="SA2 Hunting Editor" className="home-logo"
             width={64} height={64} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
           <h1 className="home-title">SA2 Hunting Editor</h1>
           <p className="home-subtitle">Crea y organiza sets de caza para Sonic Adventure 2</p>
@@ -139,7 +140,8 @@ export function HomeScreen({ onSelectLevel }: HomeScreenProps) {
             </button>
             <button className="home-tpl-btn home-tpl-btn--upload" onClick={() => handleTemplateBtn('upload')}>
               <img
-                src="/icons/upload.svg"
+                src={`${import.meta.env.BASE_URL}icons/upload.svg`}
+
                 alt="Upload"
                 width={22}
                 height={22}
