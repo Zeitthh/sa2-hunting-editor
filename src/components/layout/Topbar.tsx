@@ -164,7 +164,7 @@ export function Topbar({ viewMode, onGoHome }: TopbarProps) {
           {/* Options dropdown */}
           <div className="topbar-dropdown" ref={optionsRef}>
             <button className="topbar-btn" onClick={() => setOptionsOpen(o => !o)} aria-haspopup="true" aria-expanded={optionsOpen}>
-              ⚙ Opciones
+              Opciones
             </button>
             {optionsOpen && (
               <div className="dropdown-menu" role="menu">
@@ -177,14 +177,14 @@ export function Topbar({ viewMode, onGoHome }: TopbarProps) {
                 </div>
                 <div className="dropdown-divider" />
                 <button className="dropdown-item" onClick={() => { setShowShortcuts(true); setOptionsOpen(false); }}>
-                  ⌨ Ver atajos de teclado
+                  Ver atajos de teclado
                 </button>
                 <div className="dropdown-divider" />
                 <button className="dropdown-item dropdown-item--danger" onClick={handleClearLevelSettings}>
                   Borrar config. de niveles
                 </button>
                 <button className="dropdown-item dropdown-item--danger" onClick={handleClearStorage}>
-                  🗑 Borrar todos los datos
+                  Borrar todos los datos
                 </button>
               </div>
             )}
